@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box ;
+}
+a{
+    text-decoration: none;
+    
+}
+ul,li{
+    list-style: none;
+}
+body{
+    background-color:#2b90cf;
+    font-family: 'Roboto', sans-serif;
+   
+ 
+  
+}
+
+
+
+header{
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    
+}
+.nav-list{
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+   
+}
+.abrir-boton,
+.cerrar-boton{
+    display: none;
+}
+.link{
+    display: flex;
+    color: white;
+    font-size: 1rem;
+}
+.links{
+    color:#4cb5f5 ;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: white;
+    padding: 2px;
+
+    
+}
+.main{
+    padding: 5rem;
+    color: white;
+
+   
+}
+main h1{
+    font-size: 2rem;
+    margin:1rem;
+}
+strong{
+    color: rgb(246, 236, 236);
+}
+main p{
+    margin: 1rem;
+    
+
+}
+
+.article .btn{
+    background-color:rgb(87, 211, 87) ;
+    color:white;
+    border: 1px solid rgb(87, 211, 87);
+    border-radius: 7px;
+    font-size: 1.5rem;
+    padding: 5px;
+    margin: 10px;
+    
+}
+
+
+@media screen and (max-width :1030px) {
+    .abrir-boton,
+    .cerrar-boton{
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    .abrir-boton{color:rgb(248, 243, 243)}
+    .cerrar-boton{ color: rgb(15, 15, 15);}
+    .links{
+      
+        border: none ;
+        border-radius: 0px;
+        background-color:rgb(54, 114, 204);
+      
+
+   
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 3rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color:rgb(54, 114, 204);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(15, 15, 16, 0.866);
+    }
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list{
+       
+        flex-direction: column;
+        align-items: end;
+
+    }
+    .nav-list li a {
+        color: rgb(22, 22, 22);
+    }
+    
+}
+@media screen and (max-width :530px){
+
+  .section{
+ flex-direction: column;
+  }
+  .btn{
+    display: block;
+  }
+
+}
